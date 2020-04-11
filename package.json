@@ -1,0 +1,28 @@
+{
+  "name": "similar-words",
+  "version": "1.0.0",
+  "description": "Checks similar words with typing errors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lefcott19/similar-words.git"
+  },
+  "keywords": [
+    "similar",
+    "words",
+    "letters",
+    "errors",
+    "typing error",
+    "similar letters",
+    "compare words"
+  ],
+  "author": "Leandro Cotti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lefcott19/similar-words/issues"
+  },
+  "homepage": "https://github.com/lefcott19/similar-words"
+}
