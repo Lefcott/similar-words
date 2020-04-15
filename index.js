@@ -108,8 +108,9 @@ const areSimilar = (...words) => {
     if (typeof word1 !== "string" || typeof word2 !== "string") return false;
     const maxLen = Math.max(word1.length, word2.length);
 
-    let similar = false;
+    let similar = true;
     for (let m = -1; m < maxLen - 1; m += 1) {
+      similar = false;
       const compare2 = m === -1 ? word2 : shiftLetters(word2, m);
       if (compare(word1, compare2, maxLen)) {
         similar = true;
@@ -121,4 +122,4 @@ const areSimilar = (...words) => {
   return true;
 };
 
-module.exports = { configure, normalize, areSimilar };
+module.exports = { configure, normalize, areSimilar, compare };
