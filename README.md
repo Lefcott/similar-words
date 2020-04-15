@@ -30,5 +30,6 @@ const { areSimilar } = require('similar-words');
 
 areSimilar('hello', 'helli'); // Returns true because 'i' is near to 'o' on the keyboard
 areSimilar('the', 'thr'); // Returns true because 'r' is near to 'e' on the keyboard
+areSimilar('bye', 'ybe'); // Returns true because you can invert 2 letters for getting the original word
 areSimilar('the', 'thx'); // Returns false because 'x' is not near to 'e' on the keyboard
 ```
