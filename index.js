@@ -122,4 +122,30 @@ const areSimilar = (...words) => {
   return true;
 };
 
-module.exports = { configure, normalize, areSimilar, compare };
+const getNormalizedWords = (phrase = "") => {
+  phrase = normalize(phrase);
+  const words = [""];
+  let index = 0;
+  let lastWasSymbol = true;
+
+  for (let k = 0; k < phrase.length; k += 1) {
+    const char = phrase[k];
+    if (isLetterOrNumber(char)) {
+      lastWasSymbol = false;
+      words[index] += char;
+    } else if (!lastWasSymbol) {
+      lastWasSymbol = true;
+      index += 1;
+      words[index] = "";
+    }
+  }
+  return words;
+};
+
+module.exports = {
+  configure,
+  normalize,
+  areSimilar,
+  compare,
+  getNormalizedWords,
+};
