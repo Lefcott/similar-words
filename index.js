@@ -60,6 +60,11 @@ const configure = (Rules) => {
   }
 };
 
+const isLetterOrNumber = (char) => {
+  const code = char.charCodeAt(0);
+  return (code >= 97 && code <= 122) || (code >= 48 && code <= 57);
+};
+
 const normalize = (word) => {
   if (typeof word !== "string") return word;
   const w = word
